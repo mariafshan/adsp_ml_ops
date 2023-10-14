@@ -7,6 +7,8 @@ pd.set_option('display.max_columns', None)
 
 from sklearn.model_selection import train_test_split
 
+# ----- DATA CLEANING AND VERSIONING -----
+
 #Initial dataset (v1)
 data_v1 = pd.read_csv("./athletes.csv")
 
@@ -87,3 +89,5 @@ data_v1.to_csv('athletes.csv', index=False)
 
 # Save this cleaned dataset as v2
 data_v2.to_csv('athletes_v2.csv', index=False)
+
+
