@@ -15,45 +15,45 @@ data_v2 = pd.read_csv('athletes_v2.csv')
 
 
 
-# # ----- EDA ON DATA_V1 -----
-# check_types_v1 = data_v1.dtypes
-# # print(check_types_v1)
+# ----- EDA ON DATA_V1 -----
+check_types_v1 = data_v1.dtypes
+# print(check_types_v1)
 
-# check_shape_v1 = data_v1.shape
-# # print(check_shape_v1)
+check_shape_v1 = data_v1.shape
+# print(check_shape_v1)
 
-# check_count_v1 = data_v1.count()
-# # print(check_count_v1)
+check_count_v1 = data_v1.count()
+# print(check_count_v1)
 
-# data_v1 = data_v1.drop_duplicates()
-# print(data_v1.isnull().sum())
+data_v1 = data_v1.drop_duplicates()
+print(data_v1.isnull().sum())
 
-# basic_stats_v1 = data_v1.describe()
-# print(basic_stats_v1)
+basic_stats_v1 = data_v1.describe()
+print(basic_stats_v1)
 
-# missing_values_v1 = data_v1.isnull().sum()
-# print(missing_values_v1)
+missing_values_v1 = data_v1.isnull().sum()
+print(missing_values_v1)
 
-# #Histogram for age, weight and height
-# data_v1[['age', 'weight', 'height']].hist(figsize=(10,8))
-# plt.tight_layout()
-# plt.show()
+#Histogram for age, weight and height
+data_v1[['age', 'weight', 'height']].hist(figsize=(10,8))
+plt.tight_layout()
+plt.show()
 
-# #Boxplot for numeric lifting columns
-# lift_columns_v1 = ['deadlift', 'candj', 'snatch', 'backsq']
-# for col in lift_columns_v1:
-#     plt.figure(figsize=(6,4))
-#     sns.boxplot(y=data_v1[col])
-#     plt.title(f'Boxplot of {col}')
-#     plt.show()
+#Boxplot for numeric lifting columns
+lift_columns_v1 = ['deadlift', 'candj', 'snatch', 'backsq']
+for col in lift_columns_v1:
+    plt.figure(figsize=(6,4))
+    sns.boxplot(y=data_v1[col])
+    plt.title(f'Boxplot of {col}')
+    plt.show()
 
-# #Bar chart for categorical columns like 'gender', 'eat', 'train'
-# categorical_columns_v1 = ['gender', 'eat', 'train']
-# for col in categorical_columns_v1:
-#     plt.figure(figsize=(6,4))
-#     sns.boxplot(y=data_v2[col])
-#     plt.title(f'Bar chart of {col}')
-#     plt.show()
+#Bar chart for categorical columns like 'gender', 'eat', 'train'
+categorical_columns_v1 = ['gender', 'eat', 'train']
+for col in categorical_columns_v1:
+    plt.figure(figsize=(6,4))
+    sns.boxplot(y=data_v2[col])
+    plt.title(f'Bar chart of {col}')
+    plt.show()
 
 data_v1['total_lift'] = data_v1['deadlift'] + data_v1['candj'] + data_v1['snatch'] + data_v1['backsq']
 
