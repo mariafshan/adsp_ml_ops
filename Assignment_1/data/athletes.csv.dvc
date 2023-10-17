@@ -1,0 +1,6 @@
+outs:
+- md5: 72407770f812e75286d8ac16f5454207
+  size: 4793317
+  isexec: true
+  hash: md5
+  path: athletes.csv
